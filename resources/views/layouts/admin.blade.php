@@ -125,13 +125,38 @@
             <!-- Footer Sidebar / User Info -->
             <div class="p-4 border-t border-rose-900 bg-rose-900/30">
                 <div class="flex items-center gap-3">
-                    <div
-                        class="w-9 h-9 rounded-full bg-rose-700 flex items-center justify-center font-bold text-white text-sm shadow">
-                        A
-                    </div>
+                
                     <div class="overflow-hidden">
-                        <p class="text-sm font-semibold text-white truncate">Administrator</p>
-                        <p class="text-xs text-rose-200/70 truncate">admin@domain.com</p>
+                     
+                        <!-- Footer Sidebar / User Info & Logout -->
+                        <div class="p-4 border-t border-rose-900 bg-rose-900/30">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 overflow-hidden">
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-rose-700 flex items-center justify-center font-bold text-white text-sm shadow flex-shrink-0">
+                                        A
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-sm font-semibold text-white truncate">Administrator</p>
+                                        <p class="text-xs text-rose-200/70 truncate">admin@domain.com</p>
+                                    </div>
+                                     <!-- Tombol Log Out -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" title="Log Out"
+                                        class="p-2 text-rose-300 hover:text-white hover:bg-rose-800 rounded-lg transition-colors flex-shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                        </svg>
+                                    </button>
+                                </form>
+                                </div>
+
+                               
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

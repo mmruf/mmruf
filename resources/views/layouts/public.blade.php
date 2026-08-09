@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-  
+
 
     <!-- HEADER / NAVBAR (Tema Putih & Maroon) -->
     <header x-data="{ mobileMenuOpen: false }"
@@ -101,6 +101,14 @@
                         class="text-slate-700 hover:text-[#800020] font-semibold transition-colors duration-200">
                         Life Events
                     </a>
+                    <!-- Tombol Log Out Desktop -->
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit"
+                            class="text-slate-700 hover:text-[#800020] font-semibold transition-colors duration-200 flex items-center gap-1">
+                            Logout
+                        </button>
+                    </form>
                 </nav>
 
                 <!-- Hamburger Button (Tampilan Mobile) -->
@@ -143,6 +151,14 @@
                 class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-[#800020] hover:bg-rose-50 transition-colors">
                 Life Events
             </a>
+            <!-- Tombol Log Out Mobile -->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit"
+                    class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-[#800020] hover:bg-rose-50 transition-colors">
+                    Logout
+                </button>
+            </form>
         </div>
     </header>
 
