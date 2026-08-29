@@ -114,6 +114,13 @@
                     <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded-md font-mono">guest@gmail.com</span>
                 </div>
             </div>
+            <!-- Tambahan Akses Modul Volleyball -->
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 text-center">
+                <a href="{{ url('/volleyball') }}" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold rounded-xl transition-all">
+                    <i class="fa-solid fa-volleyball text-[#800020]"></i>
+                    <span>Akses Papan Skor Volleyball</span>
+                </a>
+            </div>
 
         </div>
     </div>

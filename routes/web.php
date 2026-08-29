@@ -5,12 +5,14 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Public\HomeController;
 use App\Http\Controllers\Public\BiodataController;
 use App\Http\Controllers\Public\LifeEventController as PublicLifeEventController;
+use App\Http\Controllers\Public\VoleyController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Admin\EducationController as AdminEducationController;
 use App\Http\Controllers\Admin\ExperienceController as AdminExperienceController;
 use App\Http\Controllers\Admin\LifeYearController;
 use App\Http\Controllers\Admin\LifeEventController as AdminLifeEventController;
+
 
 // --------------------------------------------------------------------------
 // 1. ROUTE AUTENTIKASI (LOGIN & LOGOUT)
@@ -19,6 +21,9 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
 });
+
+Route::get('/volleyball', [VoleyController::class, 'index']);
+Route::post('/volleyball/update', [VoleyController::class, 'updateScore']);
 
 Route::post('/logout', [LoginController::class, 'logout'])
     ->middleware('auth')
